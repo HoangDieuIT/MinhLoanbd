@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Sinh Nhật Minh & Loan 💕</title>
+  <meta name="description" content="Thiệp mời sinh nhật Minh & Loan">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- THREE.JS FULL 3D SCENE -->
+  <canvas id="universe-canvas"></canvas>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress"><div id="scroll-bar"></div></div>
+
+  <!-- INTRO THIỆP HỒNG - 2 cánh cửa -->
+  <div id="intro-overlay">
+    <div id="intro-sparkles"></div>
+    <div id="intro-content">
+      <p class="intro-label">✦ From hd22 with love ✦</p>
+      <h1 class="intro-names">Minh <span></span> Loan</h1>
+      <p class="intro-subtitle">Chúc Mừng Sinh Nhật</p>
+      <div class="intro-date">19 • 04 • 2026</div>
+      <button id="open-btn">
+        <span class="btn-icon">💌</span>
+        <span>Mở Thiệp</span>
+        <span class="btn-shimmer"></span>
+      </button>
+    </div>
+    <div id="door-left" class="door"></div>
+    <div id="door-right" class="door"></div>
+  </div>
+
+  <!-- MAIN - scroll container -->
+  <div id="main-content">
+    <!-- Section 1: Hero in Space -->
+    <section id="section-hero" class="space-section">
+      <div class="section-inner">
+        <div class="hero-badge">🎂 HAPPY BIRTHDAY 🎂</div>
+        <h1 class="hero-title">Minh Loan</h1>
+        <div class="hero-divider"><span class="dline"></span><span class="dheart">♥</span><span class="dline"></span></div>
+        <p class="hero-date">19 . 04 . 2026</p>
+        <p class="hero-msg">Chào mừng đến vũ trụ 💕</p>
+        <div class="scroll-hint">
+          <span>Kéo xuống để khám phá</span>
+          <div class="scroll-arrow">▼</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Planet Heart - Photo 1 -->
+    <section id="section-heart" class="space-section planet-section">
+      <div class="planet-content">
+        <div class="planet-photo-frame heart-frame">
+          <img src="img/photo1.png" alt="Minh & Loan" class="planet-photo">
+        </div>
+        <div class="planet-text">
+          <h2 class="planet-title">💕 Cô Gái Đặc Biệt</h2>
+          <p class="planet-wish">Chúc cậu một tuổi mới thật nhiều niềm vui, sức khoẻ và luôn được yêu thương bởi những người xung quanh!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Planet Ring - Photo 2 -->
+    <section id="section-ring" class="space-section planet-section">
+      <div class="planet-content reverse">
+        <div class="planet-photo-frame ring-frame">
+          <img src="img/photo4.png" alt="Nhẫn" class="planet-photo">
+        </div>
+        <div class="planet-text">
+          <h2 class="planet-title">💍 Xứng Đáng Điều Tốt Nhất</h2>
+          <p class="planet-wish">Cậu xứng đáng với mọi điều tuyệt vời nhất trên đời. Tuổi mới, sẽ luôn có người bên cạnh và dành những điều tốt đẹp nhất cho ML! </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Planet Star - Photo 3 -->
+    <section id="section-star" class="space-section planet-section">
+      <div class="planet-content">
+        <div class="planet-photo-frame star-frame">
+          <img src="img/photo2.png" alt="Đôi ta" class="planet-photo">
+        </div>
+        <div class="planet-text">
+          <h2 class="planet-title">🌟 Ngôi Sao Sáng</h2>
+          <p class="planet-wish">Như những vì sao, chúc cậu luôn toả sáng trên con đường của mình. Mong mọi ước mơ đều thành hiện thực!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Planet Cake - Photo 4 -->
+    <section id="section-cake" class="space-section planet-section">
+      <div class="planet-content reverse">
+        <div class="planet-photo-frame cake-frame">
+          <img src="img/photo3.png" alt="Bánh sinh nhật" class="planet-photo">
+        </div>
+        <div class="planet-text">
+          <h2 class="planet-title">🎂 Happy Birthday!</h2>
+          <p class="planet-wish">Thổi nến và ước điều đẹp nhất nha! Chúc mừng sinh nhật cậu - mong ML luôn vui vẻ và hạnh phúc! 🎉</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZIGZAG PLANET JOURNEY -->
+    <section id="section-zigzag" class="space-section zigzag-section">
+      <div class="zigzag-container">
+
+        <!-- Planet 1 - LEFT -->
+        <div class="zigzag-row zigzag-left" data-zz="0">
+          <div class="zigzag-planet">
+            <div class="planet-photo-frame flower-frame">
+              <img src="img/photo5.png" alt="Flowers" class="planet-photo">
+            </div>
+          </div>
+          <div class="zigzag-message">
+            <h3>🌸 Nở Rộ Như Hoa</h3>
+            <p>Cậu giống như những bông hoa. Chúc ML luôn nở rộ theo cách riêng của mình!</p>
+          </div>
+        </div>
+
+        <!-- Heart connector: left-planet → right-planet -->
+        <div class="heart-connector" data-trail="0">
+          <svg class="connector-svg" viewBox="0 0 400 200" preserveAspectRatio="none">
+            <path class="connector-curve" d="M 80 20 C 120 80, 280 120, 320 180" fill="none" stroke="rgba(255,107,157,0.4)" stroke-width="2" stroke-dasharray="6 6"/>
+          </svg>
+          <span class="connector-heart fly-to-right">💕</span>
+        </div>
+
+        <!-- Planet 2 - RIGHT -->
+        <div class="zigzag-row zigzag-right" data-zz="1">
+          <div class="zigzag-message">
+            <h3>🌅 Ánh Sáng Mới</h3>
+            <p>Mỗi bình minh là một cơ hội mới. Chúc cậu luôn tràn đầy năng lượng và sẵn sàng đón nhận mọi điều tốt đẹp!</p>
+          </div>
+          <div class="zigzag-planet">
+            <div class="planet-photo-frame sunrise-frame">
+              <img src="img/photo7.png" alt="Sunrise" class="planet-photo">
+            </div>
+          </div>
+        </div>
+
+        <!-- Heart connector: right-planet → left-planet -->
+        <div class="heart-connector" data-trail="1">
+          <svg class="connector-svg" viewBox="0 0 400 200" preserveAspectRatio="none">
+            <path class="connector-curve" d="M 320 20 C 280 80, 120 120, 80 180" fill="none" stroke="rgba(255,107,157,0.4)" stroke-width="2" stroke-dasharray="6 6"/>
+          </svg>
+          <span class="connector-heart fly-to-left">💗</span>
+        </div>
+
+        <!-- Planet 3 - LEFT -->
+        <div class="zigzag-row zigzag-left" data-zz="2">
+          <div class="zigzag-planet">
+            <div class="planet-photo-frame sky-frame">
+              <img src="img/photo6.png" alt="Starry Night" class="planet-photo">
+            </div>
+          </div>
+          <div class="zigzag-message">
+            <h3>🌌 Giấc Mơ Của Cậu</h3>
+            <p>Bầu trời rộng lớn bao nhiêu, ước mơ của cậu cũng lớn bấy nhiêu!</p>
+          </div>
+        </div>
+
+        <!-- Heart connector: left-planet → right-planet -->
+        <div class="heart-connector" data-trail="2">
+          <svg class="connector-svg" viewBox="0 0 400 200" preserveAspectRatio="none">
+            <path class="connector-curve" d="M 80 20 C 120 80, 280 120, 320 180" fill="none" stroke="rgba(255,107,157,0.4)" stroke-width="2" stroke-dasharray="6 6"/>
+          </svg>
+          <span class="connector-heart fly-to-right">💖</span>
+        </div>
+
+        <!-- Planet 4 - RIGHT -->
+        <div class="zigzag-row zigzag-right" data-zz="3">
+          <div class="zigzag-message">
+            <h3>❤️ Luôn có người yêu thương</h3>
+            <p>Dù ML có cọc cằn khó tính với t đi nữa, t vẫn luôn yêu thương ML nhiều lắm!</p>
+          </div>
+          <div class="zigzag-planet">
+            <div class="planet-photo-frame butterfly-frame">
+              <img src="img/photo8.png" alt="Butterfly" class="planet-photo">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section Final: All Wishes -->
+    <section id="section-wishes" class="space-section">
+      <div class="section-inner">
+        <div class="section-header">
+          <span class="section-icon">🌸</span>
+          <h2>Wishes From The Universe</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="wishes-grid">
+          <div class="wish-card" data-delay="0">
+            <div class="wish-emoji">🎉</div>
+            <p>Wishing you a birthday full of laughter, beauty and confidence every single day!</p>
+          </div>
+          <div class="wish-card" data-delay="1">
+            <div class="wish-emoji">💖</div>
+            <p>A new age, more success, more beauty, and always the best of health!</p>
+          </div>
+          <div class="wish-card" data-delay="2">
+            <div class="wish-emoji">🌟</div>
+            <p>May every day be a day worth remembering. Live your life to the fullest!</p>
+          </div>
+          <div class="wish-card" data-delay="3">
+            <div class="wish-emoji">🎂</div>
+            <p>Happy Birthday! May your smile always shine as bright as the stars!</p>
+          </div>
+          <div class="wish-card" data-delay="4">
+            <div class="wish-emoji">🚀</div>
+            <p>Fly high, dream big, and conquer everything you set your heart on!</p>
+          </div>
+          <div class="wish-card" data-delay="5">
+            <div class="wish-emoji">🌹</div>
+            <p>You are forever the most beautiful rose... in my heart 💕</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="section-footer" class="space-section">
+      <div class="section-inner">
+        <p class="footer-names">Minh Loan</p>
+        <p class="footer-thanks">Cảm ơn ML đã ghé thăm 💕</p>
+        <p class="footer-copy">© 2026 Made with your love ❤️</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="Love_Story.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Music toggle -->
+  <button id="music-toggle" class="music-btn" title="Bật/Tắt nhạc">🎵</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
